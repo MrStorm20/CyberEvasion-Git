@@ -80,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
 	private void MovePlayer()
 	{
 		// calculate movement direction
-		moveDirection = orientation.foward * verticalInput + orientation.right * horizontalInput;
+		moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
 		//on grounded
 		if(grounded)
@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
 		// reset y velocity
 		rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 		
-		rb.AddForce(transform.up * jumpForce, ForceMode.Impluse);
+        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
 	}
 
 	private void ResetJump()
